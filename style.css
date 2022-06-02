@@ -1,0 +1,24 @@
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html * {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #9065FE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#canvas {
+    border: dashed 1px aqua; 
+    height: 600px;
+    width: 800px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
