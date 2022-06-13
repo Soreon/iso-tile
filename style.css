@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 html, body {
     height: 100%;
     box-sizing: border-box;
@@ -16,9 +18,67 @@ body {
 }
 
 #canvas {
-    border: dashed 1px aqua; 
-    height: 600px;
-    width: 800px;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
+  border: dashed 1px aqua; 
+  height: 600px;
+  width: 800px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  overflow: scroll;
+}
+
+#controls {
+  border: dashed 1px aqua; 
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+}
+
+#controls label {
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+#controls .slider {
+  width: 100%;
+  margin: 0;
+  appearance: none;
+  height: 2px;
+  position: relative;
+  background-color: black
+}
+
+#controls .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px; /* Set a specific slider handle width */
+  height: 10px; /* Slider handle height */
+  background: #79b5fe; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  z-index: 10;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFAgMAAADwAc52AAAACVBMVEUAAAAAAAB5tf4b9D/5AAAAAXRSTlMAQObYZgAAABFJREFUCNdjEGVgyHKAICAbABCPAinqK5qaAAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
+  background-size: 10px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  z-index: 1000;
+  margin-top: -4px;
+}
+
+#controls .slider::-webkit-slider-runnable-track {
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  z-index: 0;
+}
+
+#controls .value {
+  position: absolute;
+  right: 5px;
 }

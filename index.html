@@ -9,6 +9,12 @@
 </head>
 <body>
     <canvas id="canvas" height="600" width="800"></canvas>
+    <div id="controls">
+      <label>Amplitude<span class="value">10</span><input type="range" min="0" max="100" class="slider" data-variable="WAVE_AMPLITUDE"></label>
+      <label>Fréquence<span class="value"></span><input type="range" min="300" max="1000" class="slider" data-variable="WAVE_FREQUENCY"></label>
+      <label>Composante X<span class="value"></span><input type="range" min="-1000" max="1000" class="slider" data-variable="WAVE_X_COMPONENT"></label>
+      <label>Composante Y<span class="value"></span><input type="range" min="-1000" max="1000" class="slider" data-variable="WAVE_Y_COMPONENT"></label>
+    </div>
     <script src="https://pagecdn.io/lib/mathjs/10.5.3/math.js"></script>
     <script src="main.js"></script>
 </body>
